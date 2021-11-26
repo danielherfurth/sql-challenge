@@ -12,12 +12,10 @@ CREATE TABLE titles (
                     );
 
 
-
 CREATE TABLE departments (
                              dept_no CHAR(4) PRIMARY KEY,
                              dept_name VARCHAR NOT NULL
                          );
-
 
 
 CREATE TABLE employees (
@@ -37,9 +35,6 @@ CREATE TABLE dept_emp (
                           dept_no CHAR(4) NOT NULL REFERENCES departments (dept_no),
                           PRIMARY KEY (emp_no, dept_no)
                       );
-
--- no dependencies, so no cascade
-
 
 
 CREATE TABLE salaries (
